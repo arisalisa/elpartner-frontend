@@ -1,6 +1,60 @@
 <header class="l-header header">
-	<div class="header__container">
+	<div class="header__top">
+		<div class="header__container">
+			<div class="header__menu-top">
+				{% include './blocks/menu-top.twig' %}
+			</div>
+			<div class="header__social">
 
+			</div>
+		</div>
+	</div>
+	<div class="header__middle">
+		<div class="header__container">
+			<a href="/" class="header__logo">
+				<img src="/assets/images/logo.svg" alt="Elpartner">
+				<span>Поставщик<br> электротехнического<br> оборудования</span>
+			</a>
+			<div class="header__address">
+				<div class="header__address-name">
+					Главный офис
+				</div>
+				г. Калуга, ул. Тульская, д. 189, пом.6
+			</div>
+			<div class="header__email">
+				<div class="header__email-name">
+					Email
+				</div>
+				<a href="mailto:ohrimenko.go@elpartner.ru">ohrimenko.go@elpartner.ru</a>
+			</div>
+			<div class="header__contacts">
+				<div class="header__messengers">
+					<a href="https://api.whatsapp.com/send?phone=79621765457" class="header__whatsapp"></a>
+				</div>
+				<div class="header__phones">
+					<a href="tel:+79621765457" class="header__phone">+7 (962)176-54-57</a>
+					<a class="header__call">Заказать звонок</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="header__container">
+			<div class="header__catalog">
+				<button class="header__catalog-btn">
+
+				</button>
+				<div class="header__catalog-dropdown">
+					{% include './blocks/menu-catalog.twig' %}
+				</div>
+			</div>
+			<div class="header__search">
+				<form action="" class="header__search-form">
+					<input type="text" class="header__search-input" placeholder="Поиск по каталогу" required="required" autocomplete="off">
+					<button class="header__search-submit" type="submit">Поиск</button>
+				</form>
+			</div>
+		</div>
 	</div>
 </header>
 
