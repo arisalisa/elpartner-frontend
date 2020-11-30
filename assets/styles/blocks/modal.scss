@@ -1,0 +1,204 @@
+@mixin css-cross($side, $thick, $bg, $bg-hover) {
+	position: relative;
+	width: $side;
+	height: $side;
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		width: $side * 1.4;
+		height: $thick;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: $side * -0.7;
+		transform-origin: center center;
+		background: $bg;
+		transition: background $transition-time $transition-ease;
+	}
+	&:before {
+		transform: rotate(45deg);
+	}
+	&:after {
+		transform: rotate(-45deg);
+	}
+	&:hover {
+		&:before,
+		&:after {
+			background: $bg-hover;
+		}
+	}
+}
+
+.modal {
+	$bg-overlay: rgba(#000, 0.3);
+	$bg-content: #fff;
+	$close-btn: #fff;
+	$close-btn-hover: #fff;
+	$time-open: 0.4s;
+	$time-close: 0.3s;
+
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 1000;
+	&.opened {
+		display: block;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100vh;
+	}
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: $bg-overlay;
+	}
+
+	&__btn-close {
+		@include css-cross(10px, 2px, $close-btn, $close-btn-hover);
+
+		display: block;
+		position: absolute;
+		right: 14px;
+		top: 14px;
+		font-size: 0;
+		border: none;
+		cursor: pointer;
+		z-index: 20;
+		background: linear-gradient(180deg, #FFC23F 0%, #F58807 100%);
+		border-radius: 5px;
+		width: 27px;
+		height: 27px;
+		&:after,
+		&:before {
+			margin-top: -1px;
+		}
+		&:hover {
+			box-shadow: 0px 0px 34px rgba(247, 175, 2, 0.6);
+		}
+		@media (max-width: $lg) {
+			right: 30px;
+			top: 20px;
+		}
+	}
+
+
+	&__container {
+		position: relative;
+		// text-align: center;
+		width: 90%;
+		max-width: $content-width;
+		max-height: 100vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+		background: $bg-content;
+		padding: 40px 20px;
+		animation: overlay__container-show $time-open*2 ease-in-out;
+		background: #fff;
+		box-shadow: 0px 0px 34px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		z-index: 50;
+		@media (max-width: $sm) {
+			width: 100%;
+		}
+	}
+
+
+	&__title {
+		display: block;
+		width: 100%;
+		font-family: $font-secondary;
+		font-size: 21px;
+		color: $color-heading;
+		text-align: left;
+		font-weight: 700;
+		margin-bottom: 10px;
+		margin-top: 0;
+		@media (max-width: $lg) {
+			font-size: 25px;
+			line-height: 30px;
+			margin-bottom: 24px;
+		}
+	}
+
+	&.-send-enquiry {
+		.modal__container{
+			padding: 30px 50px 50px;
+			position: relative;
+			max-width: 776px;
+
+			@media (max-width: $md) {
+				padding: 60px 20px 30px;
+				border-radius: 0;
+			}
+		}
+		form {
+			margin-top: 30px;
+			@media (max-width: $md) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	animation: overlay-show $time-open ease-in-out;
+	&.closing {
+		animation: overlay-closing $time-close ease-in-out;
+		.modal__container {
+			animation: overlay__container-closing $time-close ease-in-out;
+		}
+	}
+}
+
+@keyframes overlay-show {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes overlay-closing {
+	from{
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes overlay__container-show {
+	from{
+		opacity: 0;
+		transform: translate3d(0, 15px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes overlay__container-closing {
+	from {
+		opacity: 1;
+		transform: none;
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(0, 15px, 0);
+	}
+}
+

@@ -1,0 +1,138 @@
+.hero {
+	@extend .l-fullwidth;
+  	position: relative;
+	padding: 145px 0 10px;
+	background: #1363D4 url("../images/circle.png") left bottom no-repeat;
+	@media (min-width: $mobile-view) {
+		background: none;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			max-height: 665px;
+			background: url("../images/bg-hero.jpg") 100% 100%  no-repeat;
+			background-size: cover;
+		}
+	}
+	@media (max-width: $xl) {
+		padding: 160px 0 40px;
+	}
+	@media (max-width: $mobile-view) {
+		padding: 120px 0 40px;
+	}
+	@media (max-width: $md) {
+		padding: 100px 0 60px;
+	}
+	@media (max-width: $sm) {
+		padding: 180px 0 60px;
+	}
+  	&__container {
+		@extend .l-container;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		@media (max-width: $sm) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	h1 {
+		margin-top: 0;
+		color: #fff;
+		margin-bottom: $text-margin;
+		@media (max-width: $md) {
+			text-align: center;
+		}
+	}
+	&__text {
+		font-size: 18px;
+		line-height: 25px;
+		color: #FFFFFF;
+		margin-bottom: 25px !important;
+		@media (max-width: $lg) {
+			font-size: 15px;
+			line-height: 20px;
+		}
+		@media (max-width: $sm) {
+			text-align: center;
+		}
+	}
+	&__btn {
+		@extend .btn;
+		height: 60px;
+		line-height: 60px;
+		color: $color-accent-primary;
+		padding: 0 30px 0 70px;
+		background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 9.99988C20 8.3174 18.8696 6.99988 17 6.99988H13.927L13.9548 6.92415C13.9826 6.84908 14.0607 6.64304 14.1367 6.44278L14.1371 6.44164C14.2044 6.26432 14.2699 6.09172 14.2971 6.01878C14.4872 5.50843 14.626 5.09724 14.7382 4.69001C14.9079 4.07451 15 3.51999 15 2.99988C15 1.52787 14.0919 0.613596 12.7483 0.222364C12.1423 0.0459062 11.6148 -0.00021377 11 -0.000121934H10.5205L10.2203 0.373763C9.88112 0.796118 9.21499 1.55731 8.44701 2.43488C7.03026 4.05379 5.2669 6.06878 4.57035 7.08328C4.38961 7.0296 4.19817 7.00077 4 7.00077H2C0.89543 7.00077 0 7.8962 0 9.00077V18.0008C0 19.1053 0.89543 20.0008 2 20.0008H4C4.68712 20.0008 5.29331 19.6543 5.65337 19.1264C5.95674 19.3227 6.29522 19.4864 6.66312 19.6181C7.50544 19.9194 8.34085 20.012 9.0344 19.9993L16 19.9999C18.7551 19.9999 20 15.9434 20 9.99988ZM7.33688 17.735C6.45197 17.4183 6 16.9021 6 15.9999V9.00077C6 8.76058 6.04443 8.54699 6.14171 8.31986C6.31645 7.91188 7.90193 6.10301 9.40467 4.38855C10.1802 3.50376 10.9338 2.64396 11.46 2.01501C11.7114 2.03387 11.9484 2.07251 12.1891 2.14261C12.7622 2.30948 13 2.5489 13 2.99988C13 3.31646 12.9359 3.70219 12.8101 4.15848C12.7161 4.49946 12.5944 4.86025 12.4229 5.32054C12.3986 5.38574 12.3381 5.54529 12.2737 5.71511L12.2733 5.71616C12.1947 5.9233 12.1101 6.14613 12.079 6.23043C11.9489 6.58205 11.8633 6.84094 11.8047 7.07619C11.5555 8.07623 11.8055 8.99988 13 8.99988H17C17.6912 8.99988 18 9.35977 18 9.99988C18 14.7906 17.0151 17.9999 16 17.9999H9L8.96307 18.0005C8.52538 18.0083 7.91062 17.9402 7.33688 17.735ZM2 18.0008V9.00077H4V18.0008H2Z' fill='%231968D8'/%3E%3C/svg%3E%0A");
+		background-position: left 30px center;
+		background-repeat: no-repeat;
+		&:hover,
+		&:focus {
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 9.99988C20 8.3174 18.8696 6.99988 17 6.99988H13.927L13.9548 6.92415C13.9826 6.84908 14.0607 6.64304 14.1367 6.44278L14.1371 6.44164C14.2044 6.26432 14.2699 6.09172 14.2971 6.01878C14.4872 5.50843 14.626 5.09724 14.7382 4.69001C14.9079 4.07451 15 3.51999 15 2.99988C15 1.52787 14.0919 0.613596 12.7483 0.222364C12.1423 0.0459062 11.6148 -0.00021377 11 -0.000121934H10.5205L10.2203 0.373763C9.88112 0.796118 9.21499 1.55731 8.44701 2.43488C7.03026 4.05379 5.2669 6.06878 4.57035 7.08328C4.38961 7.0296 4.19817 7.00077 4 7.00077H2C0.89543 7.00077 0 7.8962 0 9.00077V18.0008C0 19.1053 0.89543 20.0008 2 20.0008H4C4.68712 20.0008 5.29331 19.6543 5.65337 19.1264C5.95674 19.3227 6.29522 19.4864 6.66312 19.6181C7.50544 19.9194 8.34085 20.012 9.0344 19.9993L16 19.9999C18.7551 19.9999 20 15.9434 20 9.99988ZM7.33688 17.735C6.45197 17.4183 6 16.9021 6 15.9999V9.00077C6 8.76058 6.04443 8.54699 6.14171 8.31986C6.31645 7.91188 7.90193 6.10301 9.40467 4.38855C10.1802 3.50376 10.9338 2.64396 11.46 2.01501C11.7114 2.03387 11.9484 2.07251 12.1891 2.14261C12.7622 2.30948 13 2.5489 13 2.99988C13 3.31646 12.9359 3.70219 12.8101 4.15848C12.7161 4.49946 12.5944 4.86025 12.4229 5.32054C12.3986 5.38574 12.3381 5.54529 12.2737 5.71511L12.2733 5.71616C12.1947 5.9233 12.1101 6.14613 12.079 6.23043C11.9489 6.58205 11.8633 6.84094 11.8047 7.07619C11.5555 8.07623 11.8055 8.99988 13 8.99988H17C17.6912 8.99988 18 9.35977 18 9.99988C18 14.7906 17.0151 17.9999 16 17.9999H9L8.96307 18.0005C8.52538 18.0083 7.91062 17.9402 7.33688 17.735ZM2 18.0008V9.00077H4V18.0008H2Z' fill='%23061938'/%3E%3C/svg%3E%0A");
+		}
+		@media (max-width: $lg) {
+			padding: 0 25px 0 65px;
+			background-position: left 25px center;
+		}
+	}
+	&__content {
+		position: relative;
+		z-index: 3;
+		@media (max-width: $md) {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	&__img {
+		position: relative;
+		z-index: 3;
+		@media (min-width: $mobile-view + 1px) {
+			width: 67%;
+			max-width: 822px;
+			margin-bottom: -55px;
+		}
+		&.-mobile {
+			display: block;
+			img {
+				display: block;
+				width: 320px;
+				box-shadow: 0px 4px 80px rgba(28, 31, 60, 0.15);
+				border-radius: 10px;
+			}
+			@media (min-width: $mobile-view + 1px) {
+				display: none;
+			}
+			@media (max-width: $md) {
+				display: none;
+			}
+		}
+		&-desktop {
+			display: block;
+			width: 866px;
+			position: relative;
+			top: -55px;
+			right: 43px;
+			@media (max-width: $mobile-view) {
+				display: none;
+			}
+		}
+		&-mobile {
+			display: block;
+			position: absolute;
+			bottom: 100px;
+			left: -132px;
+			@media (max-width: $mobile-view) {
+				display: none;
+			}
+		}
+		img {
+			display: block;
+			max-width: 100%;
+			object-fit: contain;
+
+		}
+	}
+}

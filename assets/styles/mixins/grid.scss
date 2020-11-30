@@ -1,0 +1,54 @@
+@mixin grid($grid-gap){
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  margin-left: -$grid-gap/2;
+  margin-right: -$grid-gap/2;
+
+  &>*{
+	margin-left: $grid-gap/2;
+	margin-right: $grid-gap/2;
+  }
+}
+@mixin grid-row(){
+  display: flex;
+  width: 100%;
+  &>*{
+	margin-left: $grid-gap/2;
+	margin-right: $grid-gap/2;
+  }
+}
+
+@mixin grid-col($grid-width, $grid-gap){
+  width: #{'calc(' + $grid-width * 100% + ' - ' +  $grid-gap + ')'};
+}
+@mixin grid-col-offset($grid-width, $grid-gap){
+  margin-left: #{'calc(' + $grid-width * 100% + ' + ' +  $grid-gap/2 + ')'};
+}
+
+@mixin grid-col-media($grid-width, $grid-gap, $grid-screen-prefix){
+  @if map-has-key($grid-screen, $grid-screen-prefix) {
+
+	@media ( max-width: #{map-get($grid-screen, $grid-screen-prefix)} ) {
+	  @include grid-col($grid-width, $grid-gap);
+	  @content;
+	}
+
+  } @else {
+	@warn "Unknown screen '#{$grid-screen-prefix}' in $grid-screen.";
+  }
+
+}
+@mixin grid-col-offset-media($grid-width, $grid-gap, $grid-screen-prefix){
+  @if map-has-key($grid-screen, $grid-screen-prefix) {
+
+	@media ( max-width: #{map-get($grid-screen, $grid-screen-prefix)} ) {
+	  @include grid-col-offset($grid-width, $grid-gap);
+	  @content;
+	}
+
+  } @else {
+	@warn "Unknown screen '#{$grid-screen-prefix}' in $grid-screen.";
+  }
+}

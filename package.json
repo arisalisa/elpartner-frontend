@@ -1,0 +1,64 @@
+{
+  "name": "elpartner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yurikssi/emdesell.git"
+  },
+  "author": "Alisa Stepanova",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "autoprefixer": "^8.3.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.23.3",
+    "css-mqpacker": "^6.0.2",
+    "files-exist": "^1.0.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-hash": "^4.1.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-include": "^2.3.1",
+    "gulp-merge": "^0.1.1",
+    "gulp-npm-files": "^0.1.3",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rewrite-css": "^1.1.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-twig": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.8",
+    "gulper": "^0.1.3",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-zopfli": "^5.1.0",
+    "livereload": "^0.6.0",
+    "postcss-csso": "^3.0.0",
+    "postcss-focus": "^3.0.0",
+    "sort-css-media-queries": "^1.3.4"
+  },
+  "dependencies": {
+    "css-vars-ponyfill": "^1.12.2",
+    "imagesloaded": "^4.1.4",
+    "jquery": "^3.3.1",
+    "normalize.css": "^7.0.0",
+    "noty": "^3.2.0-beta",
+    "owl.carousel": "^2.3.4"
+  }
+}

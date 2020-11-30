@@ -1,0 +1,19 @@
+.publication-list {
+	$gap: 30px;
+
+	@include grid($gap);
+
+	&__item{
+		@include grid-col(1,$gap);
+		margin-bottom: 30px;
+
+		@media (min-width: $md) {
+			@include grid-col(1/2,$gap);
+		}
+
+		@media (min-width: $mobile-view) {
+			@include grid-col(1/3,$gap);
+		}
+
+	}
+}

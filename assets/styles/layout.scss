@@ -1,0 +1,49 @@
+.l-wrapper,
+.l-main,
+.l-header,
+.l-footer {
+  width: 100%;
+  position: relative;
+}
+
+.l-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.l-header {
+  z-index: 10;
+}
+
+.l-main {
+  flex: 1 0 auto;
+  z-index: 5;
+  padding: 0;
+}
+
+.l-footer {
+  overflow: hidden;
+}
+
+.l-container {
+  max-width: $content-width;
+  margin: 0 auto;
+  @media (max-width: ( $content-width + $content-gap * 2)) {
+	width: auto;
+	max-width: 100%;
+	margin: 0 $content-gap;
+  }
+}
+
+.l-fullwidth {
+  width: 100vw;
+  margin-left: calc((100vw - 100%) * -1/2);
+}
+.l-content {
+  display: block;
+  padding: 0 0 60px;
+
+}
+

@@ -1,0 +1,13 @@
+.publication-similar {
+	h2 {
+		margin-bottom: 50px;
+	}
+	.publication-item {
+		&__desc {
+			display: none;
+		}
+		&__title {
+			margin-bottom: 25px;
+		}
+	}
+}

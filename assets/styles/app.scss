@@ -1,0 +1,37 @@
+@import "variable";
+@import "base";
+@import "layout";
+@import "animations";
+
+@import "mixins/grid";
+
+@import "common/content";
+@import "common/buttons";
+@import "common/pagination";
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/banners";
+@import "blocks/reviews";
+@import "blocks/blocks-list";
+@import "blocks/hero";
+@import "blocks/users";
+@import "blocks/functions";
+@import "blocks/technical";
+@import "blocks/benefits";
+@import "blocks/service";
+@import "blocks/benefits-counter";
+@import "blocks/tariffs";
+@import "blocks/contacts";
+@import "blocks/form";
+@import "blocks/publication-list-item";
+@import "blocks/publication-list";
+@import "blocks/publication-similar";
+@import "blocks/publication-show";
+@import "blocks/partners-hero";
+@import "blocks/partners-about";
+@import "blocks/partners-banners";
+@import "blocks/partners-advantages";
+@import "blocks/partners-steps";
+@import "blocks/partners-faq";
+

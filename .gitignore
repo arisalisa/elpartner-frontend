@@ -1,0 +1,7 @@
+/prod/
+/public/assets/*
+!public/assets/images/
+/node_modules
+/.idea
+public/*.html
+www

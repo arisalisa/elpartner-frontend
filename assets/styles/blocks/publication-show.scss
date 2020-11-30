@@ -1,0 +1,156 @@
+.publication-show {
+	margin-top: 50px;
+	margin-bottom: 80px;
+	width: 100%;
+	&__img {
+		position: relative;
+		z-index: 3;
+		display: block;
+		width: 100%;
+		height: 300px;
+		box-shadow: 0px 11px 14px rgba(0, 0, 0, 0.05);
+		border-radius: 5px;
+		overflow: hidden;
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content {
+		position: relative;
+		z-index: 5;
+		display: block;
+		width: 100%;
+		max-width: 768px;
+		margin: -30px auto 0;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 55px rgba(30, 51, 125, 0.1);
+		border-radius: 3px;
+		@media (max-width: $lg) {
+			width: calc(100% - 18px);
+		}
+	}
+	&__header {
+
+	}
+	&__info {
+		padding: 30px 20px 30px 44px;
+		display: flex;
+		align-items: center;
+		@media (max-width: $lg) {
+			padding: 30px 20px 30px 20px;
+			flex-wrap: wrap;
+		}
+		@media (max-width: $sm) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	&__title {
+		padding: 0 44px;
+		width: 100%;
+		position: relative;
+		border-top: 1px solid #DFE8F4;
+		border-bottom: 1px solid #DFE8F4;
+		@media (max-width: $lg) {
+			padding: 0 20px;
+		}
+		h1 {
+			font-size: 34px;
+			margin-top: 20px;
+			margin-bottom: 30px;
+			@media (max-width: $lg) {
+				font-size: 25px;
+			}
+		}
+	}
+	&__btn {
+		@extend .btn;
+		@extend .btn--primary;
+		flex: none;
+		margin-right: 30px;
+		min-width: 156px;
+		@media (max-width: $lg) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: $sm) {
+			width: 100%;
+		}
+	}
+	&__date {
+		display: block;
+		font-family: $font-secondary;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 1;
+		color: #99A7C0;
+		padding: 5px 0;
+		padding-left: 32px;
+		background: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10H12V5H10V12H16V10Z' fill='%2399A7C0'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11C22 17.0751 17.0751 22 11 22ZM11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z' fill='%2399A7C0'/%3E%3C/svg%3E ") left center no-repeat;
+		margin-right: 20px;
+		flex: none;
+		@media (max-width: $lg) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: $sm) {
+			width: 100%;
+		}
+	}
+	&__name {
+		display: block;
+		font-family: $font-secondary;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 1.1;
+		color: #99A7C0;
+		padding: 5px 0;
+		padding-left: 32px;
+		background: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 14C8.76086 14 7 12.4274 7 9C7 6.75576 8.5791 5 11 5C13.4142 5 15 6.92158 15 9.2C15 12.4796 13.2181 14 11 14ZM9 9C9 11.2693 9.81821 12 11 12C12.1777 12 13 11.2984 13 9.2C13 7.95042 12.2157 7 11 7C9.73374 7 9 7.81582 9 9Z' fill='%2399A7C0'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11C22 17.0751 17.0751 22 11 22ZM18.3995 16.1246C19.4086 14.6703 20 12.9042 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 12.9042 2.59138 14.6703 3.6005 16.1246C4.72595 14.6381 7.3706 14 11 14C14.6294 14 17.274 14.6381 18.3995 16.1246ZM16.9647 17.7398C16.672 16.6874 14.5694 16 11 16C7.43062 16 5.328 16.6874 5.03532 17.7398C6.6233 19.1462 8.71194 20 11 20C13.2881 20 15.3767 19.1462 16.9647 17.7398Z' fill='%2399A7C0'/%3E%3C/svg%3E ") left center no-repeat;
+		flex: none;
+		margin-right: 20px;
+		@media (max-width: $lg) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: $sm) {
+			width: 100%;
+		}
+	}
+	&__category {
+		display: block;
+		font-family: $font-secondary;
+		font-weight: bold;
+		font-size: 13px;
+		text-align: left;
+		color: #1968D8;
+		flex: auto;
+		@media (max-width: $lg) {
+			width: 100%;
+		}
+	}
+	&__text {
+		padding: 1px 44px 60px;
+		@media (max-width: $lg) {
+			padding: 1px 20px 40px;
+		}
+		img {
+			max-width: 100%;
+			border: 1px solid #E4E7FB;
+			border-radius: 10px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 25px;
+			color: #5E6C84;
+			margin-bottom: 20px;
+			@media (max-width: $lg) {
+				font-size: 14px;
+				line-height: 1.4;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
