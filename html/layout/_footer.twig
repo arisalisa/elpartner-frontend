@@ -1,5 +1,62 @@
 <footer class="l-footer footer">
-	<div class="footer__container">
+	<div class="footer__menu">
+		<div class="menu-footer js-footer-menu">
+			<nav class="menu-footer__container">
+				<ul>
+					<li class="-has-dropdown is-active">
+						<a href="">Category 1</a>
+						<div class="menu-footer__dropdown -col-2">
+							<ul>
+								{% for i in 0..12 %}
+									<li {% if (loop.index == 3) %}class="is-active"{% endif %}>
+										<a href="#">Subcategory {{loop.index}}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+					{% for i in 0..2 %}
+						<li class="-has-dropdown">
+							<a href="">Category {{loop.index + 1}}</a>
+							<div class="menu-footer__dropdown">
+								<ul>
+									{% for i in 0..7 %}
+										<li><a href="#">Subcategory {{loop.index}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+	</div>
 
+	<div class="footer__bottom">
+		<div class="footer__content">
+			<a href="/" class="footer__logo">
+				<img src="/assets/images/logo.svg" alt="Элпратнер">
+			</a>
+			<div class="footer__copyright">© 2005–2020 ООО «Элпартнер».<br> Поставщик электротехнического оборудования</div>
+			<a href="#" class="footer__policy">Политика конфиденциальности</a>
+		</div>
+		<div class="social-icon">
+			<a href="#" class="icon-facebook" rel="noreferrer noopener">facebook</a>
+			<a href="#" class="icon-vkontakte" rel="noreferrer noopener">vkontakte</a>
+		</div>
+		<div class="footer__menu-bottom">
+			Покупателям
+			<nav>
+				<ul>
+					<li>О компании</li>
+					<li>Производители</li>
+					<li>Доставка и оплата</li>
+					<li>Акции</li>
+					<li>Новости</li>
+					<li>Контакты</li>
+				</ul>
+			</nav>
+		</div>
 	</div>
 </footer>
+

@@ -1,0 +1,35 @@
+{%  set slides = [ {
+    img: '/assets/images/slider-1.jpg',
+    name: 'Электротехническое оборудование',
+    description: 'Поставки электротехнической продукции отечественных
+и иностранных производителей на рынок России и за рубеж',
+    url: '#'
+},{
+    img: '/assets/images/slider-1.jpg',
+    name: 'Электротехническое оборудование',
+    description: ''
+},{
+    img: '/assets/images/slider-1.jpg',
+    name: '',
+    description: ''
+}] %}
+<div class="slider-header js-slider-header">
+    <div class="slider-header__mobile">
+        <img src="/assets/images/slider-mobile.jpg" alt="Электротехническое
+оборудование">
+    </div>
+    <div class="slider-header__desktop js-slider">
+        {% for item in slides %}
+            <div class="item slider-header__item">
+                {% if item.url %}<a href="{{ item.url }}">{% endif %}
+                    <img class="slider-header__img" src="{{ item.img }}" alt="{{ item.name }}" title="{{ item.name }}">
+                    {% if item.url %}</a>{% endif %}
+                <div class="slider-header__text-container">
+                    {% if item.name %}<p class="-title">{{ item.name }}</p>{% endif %}
+                    {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                    {% if item.url %}<a class="slider-header__item-btn" href="{{ item.url }}">В КАТАЛОГ</a>{% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

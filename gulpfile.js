@@ -26,6 +26,7 @@ const scripts = [
 				// 'assets/scripts/menu-smart.js',
 				'assets/scripts/menu-mobile.js',
 				'assets/scripts/carousel.js',
+				'assets/scripts/products.js',
 				'assets/scripts/main.js',
 			],
 			watch: [

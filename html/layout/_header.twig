@@ -2,10 +2,11 @@
 	<div class="header__top">
 		<div class="header__container">
 			<div class="header__menu-top">
-				{% include './blocks/menu-top.twig' %}
+{#				{% include './blocks/menu-top.twig' %}#}
 			</div>
-			<div class="header__social">
-
+			<div class="header__social social-icon">
+				<a href="#" class="icon-facebook" rel="noreferrer noopener">facebook</a>
+				<a href="#" class="icon-vkontakte" rel="noreferrer noopener">vkontakte</a>
 			</div>
 		</div>
 	</div>
@@ -42,17 +43,21 @@
 		<div class="header__container">
 			<div class="header__catalog">
 				<button class="header__catalog-btn">
-
+					Каталог
 				</button>
 				<div class="header__catalog-dropdown">
-					{% include './blocks/menu-catalog.twig' %}
+{#					{% include './blocks/menu-catalog.twig' %}#}
 				</div>
 			</div>
 			<div class="header__search">
 				<form action="" class="header__search-form">
-					<input type="text" class="header__search-input" placeholder="Поиск по каталогу" required="required" autocomplete="off">
+					<input type="text" class="header__search-input" placeholder="Поиск по каталогу">
 					<button class="header__search-submit" type="submit">Поиск</button>
 				</form>
+			</div>
+			<div class="header__cart">
+				В запросе
+				<a href="#">12 позиций</a>
 			</div>
 		</div>
 	</div>

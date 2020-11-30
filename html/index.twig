@@ -8,79 +8,14 @@
 {% block main %}
 
 	<div class="l-container">
-		{% include './blocks/hero.twig' %}
-		{% include './blocks/users.twig' %}
-
-		<div class="banner -blue">
-			<div class="banner__container">
-				<h2 class="banner__title">CRM, онлайн-техподдержка</h2>
-				<p class="banner__desc">и еще 10+ инструментов для онлайн-обучения и инфо-бизнеса на одной платформе</p>
-				<a class="banner__btn" target="_blank" href="./form-registration.html">Получить бесплатно на 14 дней</a>
-			</div>
-		</div>
-
-		{% include './blocks/functions.twig' %}
-
-		<div class="banner -green">
-			<div class="banner__container">
-				<h2 class="banner__title">Регистрировать ИП не обязательно!</h2>
-				<p class="banner__desc">Emdesell позволяет принимать платежи физическим лицам</p>
-				<a class="banner__btn" target="_blank" href="./form-registration.html">Получить бесплатно на 14 дней</a>
-			</div>
-		</div>
-
-		{% include 'blocks/technical.twig' %}
-
-		<div class="reviews">
-			<div class="reviews__container">
-				<div class="reviews__item">
-					<div class="reviews__img">
-						<img src="assets/images/reviews-1.jpg" alt="">
-					</div>
-					<div class="reviews__content">
-						<div class="reviews__title"><span>Анна Устюгова</span> основатель <a href="https://etsyforbeginners.com/" target="_blank">Etsy-школы №1</a></div>
-						<div class="reviews__text">Работаю с Вами больше года и уже оплатила доступ еще на год с лишним. Вы классные! Есть с чем сравнить (до Вас было 2 другие платформы). Небо и Земля. Хотя о Вас узнала совершенно случайно. Другие были у многих на слуху, но уступают Вам по качеству.</div>
-						<a href="./form-registration.html" target="_blank" class="reviews__btn">Создать свою школу</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		{% include 'blocks/benefits.twig' %}
-		{% include 'blocks/service.twig' %}
-
-		<div class="reviews">
-			<div class="reviews__container">
-				<div class="reviews__item">
-					<div class="reviews__img">
-						<img src="assets/images/reviews-2.jpg" alt="">
-					</div>
-					<div class="reviews__content">
-						<div class="reviews__title"><span>Дмитрий Свистунов</span> основатель ЭТР Юг и <a href="https://etr-yug.ru/" target="_blank"> Онлайн-школы<br> по ПО Omnicomm-Online</a></div>
-						<div class="reviews__text">Хорошая платформа, цена и качество соответствует и даже больше. Много видеоуроков о том как и что настраивать. И самое главное в этом то, что платформа Emdesell не глючит, люди в удобное для них время заходят - изучают и работают. За это мы и ценим платформу Emdesell</div>
-						<a href="./form-registration.html" target="_blank" class="reviews__btn">Создать свою школу</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="banner -red">
-			<div class="banner__container">
-				<h2 class="banner__title">Получите скидку 10%</h2>
-				<p class="banner__desc">За регистрацию в числе первых 20 человек вы получите скидку 20% на любой тариф</p>
-				<a class="banner__btn with-anchor" href="#tariffs">Выбрать тариф</a>
-			</div>
-		</div>
-
-		{% include 'blocks/benefits-counter.twig' %}
-
-		{% include 'blocks/reviews-carousel.twig' %}
-
-		{% include 'blocks/tariffs.twig' %}
-
-		{% include 'blocks/contacts.twig' %}
-
+		{% include './blocks/slider-header.twig' %}
+		{% include './blocks/benefits.twig' %}
+		{% include './blocks/products/products-carousel.twig' %}
+		{% include './blocks/products/products-catalog.twig' %}
+		{% include './blocks/text-main.twig' %}
+		{% include './blocks/publications/publications-widget.twig' %}
+		{% include './blocks/text-additional.twig' %}
+		{% include './blocks/form-bottom.twig' %}
 	</div>
 {% endblock %}
 

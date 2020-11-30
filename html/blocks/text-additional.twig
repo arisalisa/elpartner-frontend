@@ -1,0 +1,57 @@
+<div class="text-additional">
+    <div class="text-additional__container">
+        <div class="text-additional__img">
+            <img src="/assets/images/text-additional.jpg" alt="Электротехническое оборудование">
+        </div>
+        <div class="text-additional__content">
+            <h2 class="text-additional__title">Электротехническое оборудование</h2>
+            <div class="text-additional__text">
+                <p>Наши Партнеры — это ABB, Ballu, Bosch, DKC, EKF, IEK, Ledvance, OBO Bettermann, OSRAM, Philips, Schneider Electric и др. И «Элком-Электро» не останавливается на достигнутом.</p>
+                <p>В 2012 году было создано собственное производство по сборке электрощитового оборудования. Номенклатура выпускаемых НКУ постоянно расширяется, а их качество подтверждено сертификатами ABB, DKC, EKF, IEK, Hyundai.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%  set partners = [ {
+    img: '/assets/images/partners-1.png',
+    name: 'Partner logo 1',
+},{
+    img: '/assets/images/partners-2.png',
+    name: 'Partner logo 2',
+},{
+    img: '/assets/images/partners-3.png',
+    name: 'Partner logo 3',
+},{
+    img: '/assets/images/partners-4.png',
+    name: 'Partner logo 4',
+},{
+    img: '/assets/images/partners-5.png',
+    name: 'Partner logo 5',
+},{
+    img: '/assets/images/partners-6.png',
+    name: 'Partner logo 6',
+},{
+    img: '/assets/images/partners-7.png',
+    name: 'Partner logo 7',
+},{
+    img: '/assets/images/partners-8.png',
+    name: 'Partner logo 8',
+}] %}
+
+<div class="text-partners js-partners-carousel">
+    <div class="text-partners__container">
+        <h3 class="text-partners__title">
+            Партнеры производители
+        </h3>
+        <div class="text-partners__carousel js-slider">
+            {% for item in partners %}
+                <div class="text-partners__item">
+                    <img class="text-partners__item-img" src="{{ item.img }}" alt="{{ item.name }}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

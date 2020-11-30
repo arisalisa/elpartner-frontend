@@ -24,14 +24,15 @@
 @import "blocks/tariffs";
 @import "blocks/contacts";
 @import "blocks/form";
-@import "blocks/publication-list-item";
-@import "blocks/publication-list";
-@import "blocks/publication-similar";
-@import "blocks/publication-show";
-@import "blocks/partners-hero";
-@import "blocks/partners-about";
-@import "blocks/partners-banners";
-@import "blocks/partners-advantages";
-@import "blocks/partners-steps";
-@import "blocks/partners-faq";
 
+@import "blocks/publications/publications-list-item";
+@import "blocks/publications/publications-list";
+@import "blocks/publications/publications-widget";
+@import "blocks/publications/publications-show";
+
+@import "blocks/text-homepage";
+@import "blocks/products/products-list-item";
+@import "blocks/products/products-list";
+@import "blocks/products/products-catalog";
+@import "blocks/products/products-carousel";
+@import "blocks/products/products-show";

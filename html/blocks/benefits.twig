@@ -1,0 +1,28 @@
+{%  set benefits = [ {
+    img: '/assets/images/benefits-1.svg',
+    name: 'Доставка по всей России транспортными компаниями',
+},{
+    img: '/assets/images/benefits-2.svg',
+    name: 'Профессионалы с рабочим стажем более 10 лет',
+},{
+    img: '/assets/images/benefits-3.svg',
+    name: 'Будет еще одно преимущества, пока непонятно когда)',
+},{
+    img: '/assets/images/benefits-4.svg',
+    name: 'Предоставляем скидки для монтажников',
+}] %}
+
+<div class="benefits">
+    <div class="benefits__container">
+        <div class="benefits__list">
+            {% for item in benefits %}
+            <div class="benefits__item">
+                <div class="benefits__item-img">
+                    <img src="{{ item.img }}" alt="">
+                </div>
+                <div class="benefits__item-title">{{ item.name }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
