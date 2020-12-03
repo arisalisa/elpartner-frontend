@@ -1,79 +1,24 @@
 .benefits {
-	@extend .l-fullwidth;
-	background: #F3F7FD;
-	padding: 70px 0 30px;
-	position: relative;
-	z-index: 2;
-	@media (max-width: $mobile-view) {
-		padding: 30px 0 10px;
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		top: -30px;
-		left: 0;
-		width: 100%;
-		height: 70%;
-		background: #F3F7FD url('../images/line-2.jpg') center top no-repeat;
-		background-size: 100% 165px;
-		z-index: 0;
-		@media (max-width: $mobile-view) {
-			background-size: auto 165px;
-			top: -35px;
-			background-position-x: 40%;
-		}
-	}
-	&__container {
-		@extend .l-container;
-		@media (min-width: $xl) {
-			&:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 1;
-				width: 243px;
-				height: 476px;
-				background: url("../images/circle-4.png") no-repeat;
-			}
-			&:after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 260px;
-				right: 0;
-				z-index: 1;
-				width: 233px;
-				height: 477px;
-				background: url("../images/circle-5.png") no-repeat;
-			}
-		}
-
-	}
-	&__content {
-		position: relative;
-		z-index: 3;
-	}
-	&__title-text {
-		font-size: 18px;
-		line-height: 25px;
-		text-align: center;
-		color: #5E6C84;
-		margin-bottom: 55px !important;
-		@media (max-width: $lg) {
-			font-size: 13px;
-			margin-bottom: 30px !important;
-		}
-	}
-	.blocks-list {
-		&__item {
-			&-content {
-				min-height: 120px;
-				@media (max-width: $lg) {
-					min-height: auto;
-				}
-			}
-		}
-	}
+  $gap: 20px;
+  padding: 40px 0 40px;
+  &__list {
+    @include grid($gap);
+  }
+  &__item {
+    @include grid-col(1/4, $gap);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &-img {
+      width: 75px;
+      height: 75px;
+      margin-right: 15px;
+      flex: none;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
 }

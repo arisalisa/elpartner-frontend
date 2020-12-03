@@ -124,7 +124,6 @@
 	}
 	&__btn {
 		@extend .btn;
-		@extend .btn--secondary;
 		margin: 30px auto 0;
 		padding: 0 30px;
 		@media (min-width: $mobile-view) {

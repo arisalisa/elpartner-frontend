@@ -1,13 +1,11 @@
 .slider-header {
-  /* Variables */
-  $width-desktop: 1920px;
-  $height-desktop: 550px;
+  $height-desktop: 440px;
 
   position: relative;
   width: 100%;
   height: $height-desktop;
   overflow: hidden;
-
+  border-radius: 5px;
   @media (max-width: $lg) {
     height: auto;
   }
@@ -46,7 +44,8 @@
 
     &-btn{
       @extend .btn;
-      @extend .btn--primary;
+      @extend .btn--bordered;
+      margin-top: 30px;
     }
   }
 
@@ -69,18 +68,10 @@
     position: absolute;
 
     @media (min-width: $md) {
-      left: 20px;
-      bottom: 60px;
+      left: 90px;
+      top: 50%;
+      transform: translateY(-50%);
       width: 600px;
-      margin-left: 0;
-    }
-
-    @media (min-width: $xl) {
-      left: 50%;
-      bottom: 135px;
-      width: 600px;
-      max-width: 60%;
-      margin-left: -585px;
     }
 
     @media (max-width: $md) {
@@ -88,13 +79,16 @@
     }
 
     p {
-      color: #ffffff;
-      font-size: 17px;
-
+      color: $color-base;
+      font-size: 18px;
+      margin-bottom: 0;
       &.-title {
-        font-size: 50px;
-        line-height: 50px;
-        margin: 0 0 10px;
+        font-family: $font-secondary;
+        color: $color-dark;
+        font-size: 45px;
+        line-height: 1.1;
+        margin: 0 0 27px;
+        font-weight: 700;
       }
     }
   }

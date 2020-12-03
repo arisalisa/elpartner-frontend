@@ -1,20 +1,7 @@
 .header {
 	position: relative;
-	background: #1363D4;
 	padding: 20px 0;
 	transition: all 0.4s ease;
-	.home-page & {
-		background: transparent;
-		position: absolute;
-	}
-	&.is-fixed {
-		background: #1363D4;
-		padding: 10px 0;
-		position: fixed;
-		top: 0;
-		left: 0;
-		//animation: header-fixed .6s ease-in-out;
-	}
 	&__container {
 		@extend .l-container;
 		display: flex;
@@ -89,7 +76,6 @@
 			}
 		}
 		&.-phone {
-			@extend .btn--secondary;
 			color: #1F1F1F;
 			min-width: 180px;
 			margin-right: 17px;

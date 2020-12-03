@@ -3,7 +3,7 @@ if ($sliderHeader.length > 0) {
 	resizeComponent.addMediaQuery({
 		min: 480,
 		max: 10000,
-		onFirstEnter: () => {
+		onEnter: () => {
 			((_root) => {
 				const self = {
 					root: _root,
@@ -15,7 +15,6 @@ if ($sliderHeader.length > 0) {
 					self.carousel.addClass('owl-carousel');
 
 					self.carousel.owlCarousel({
-						rtl: App.isRtl,
 						nav: false,
 						dots: true,
 						loop: true,
