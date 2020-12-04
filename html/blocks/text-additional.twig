@@ -40,15 +40,15 @@
     name: 'Partner logo 8',
 }] %}
 
-<div class="text-partners js-partners-carousel">
-    <div class="text-partners__container">
-        <h3 class="text-partners__title">
+<div class="partners js-partners-carousel">
+    <div class="partners__container">
+        <h3 class="partners__title">
             Партнеры производители
         </h3>
-        <div class="text-partners__carousel js-slider">
+        <div class="partners__carousel js-slider">
             {% for item in partners %}
-                <div class="text-partners__item">
-                    <img class="text-partners__item-img" src="{{ item.img }}" alt="{{ item.name }}">
+                <div class="partners__item">
+                    <img class="partners__item-img" src="{{ item.img }}" alt="{{ item.name }}">
                 </div>
             {% endfor %}
         </div>

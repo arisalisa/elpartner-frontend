@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yurikssi/emdesell.git"
+    "url": ""
   },
   "author": "Alisa Stepanova",
   "license": "ISC",
@@ -25,7 +25,6 @@
     "browser-sync": "^2.23.3",
     "css-mqpacker": "^6.0.2",
     "files-exist": "^1.0.2",
-    "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-cache": "^0.4.6",
     "gulp-concat": "^2.6.1",
@@ -55,6 +54,7 @@
   },
   "dependencies": {
     "css-vars-ponyfill": "^1.12.2",
+    "gulp": "^3.9.1",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",
     "normalize.css": "^7.0.0",

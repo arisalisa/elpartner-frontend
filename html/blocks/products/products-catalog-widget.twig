@@ -1,0 +1,30 @@
+{%  set category = [ {
+    img: '/assets/images/category-1.jpg',
+    title: 'Светотехника',
+},{
+    img: '/assets/images/category-2.jpg',
+    title: 'Кабель и провод',
+},{
+    img: '/assets/images/category-3.jpg',
+    title: 'Крепление, соединение<br> и маркировка кабеля',
+},{
+    img: '/assets/images/category-4.jpg',
+    title: 'Индивидуальная<br> защита',
+},{
+    img: '/assets/images/category-5.jpg',
+    title: 'Устройства защиты<br> и распределения',
+}] %}
+
+<div class="products-catalog-widget">
+    <div class="products-catalog-widget__container">
+        <h2 class="products-catalog-widget__title">Каталог оборудования</h2>
+        <div class="products-catalog-widget__list js-slider">
+            {% for item in category %}
+                <div class="products-catalog-widget__item">
+                    <a class="products-catalog-widget__item-img" href="#"><img src="{{ item.img }}" alt=""></a>
+                    <a class="products-catalog-widget__item-title" href="#">{{ item.title }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

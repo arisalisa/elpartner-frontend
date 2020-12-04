@@ -4,7 +4,6 @@
   position: relative;
   width: 100%;
   height: $height-desktop;
-  overflow: hidden;
   border-radius: 5px;
   @media (max-width: $lg) {
     height: auto;
@@ -90,6 +89,27 @@
         margin: 0 0 27px;
         font-weight: 700;
       }
+    }
+  }
+  .owl-dots {
+    @extend .owl-dots;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .owl-nav {
+    @extend .owl-nav;
+    display: none;
+    @media (min-width: ( $content-width + $content-gap * 2)) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 60px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }

@@ -1,0 +1,52 @@
+{%  set products = [ {
+    img: '/assets/images/temp/products-1.jpg',
+    title: 'NUM (NYM)-J 3* 2,5-0,66 (НКЗ)',
+    category: 'Schneider Electric',
+    code: 'LV432593'
+},{
+    img: '/assets/images/temp/products-1.jpg',
+    title: 'NUM (NYM)-J 3* 2,5-0,66 (НКЗ) NUM (NYM)-J 3* 2,5-0,66 (НКЗ)',
+    category: 'Schneider Electric',
+    code: 'LV432593'
+},{
+    img: '/assets/images/temp/products-1.jpg',
+    title: 'NUM (NYM)-J 3* 2,5-0,66 (НКЗ)',
+    category: 'Schneider Electric',
+    code: 'LV432593'
+},{
+    img: '/assets/images/temp/products-1.jpg',
+    title: 'NUM (NYM)-J 3* 2,5-0,66 (НКЗ)',
+    category: 'Schneider Electric',
+    code: 'LV432593'
+},{
+    img: '/assets/images/temp/products-1.jpg',
+    title: 'NUM (NYM)-J 3* 2,5-0,66 (НКЗ)',
+    category: 'Schneider Electric',
+    code: 'LV432593'
+},{
+    img: '/assets/images/temp/products-1.jpg',
+    title: 'NUM (NYM)-J 3* 2,5-0,66 (НКЗ)',
+    category: 'Schneider Electric',
+    code: 'LV432593'
+},{
+    img: '/assets/images/temp/products-1.jpg',
+    title: 'NUM (NYM)-J 3* 2,5-0,66 (НКЗ)',
+    category: 'Schneider Electric',
+    code: 'LV432593'
+},{
+    img: '/assets/images/temp/products-1.jpg',
+    title: 'NUM (NYM)-J 3* 2,5-0,66 (НКЗ)',
+    category: 'Schneider Electric',
+    code: 'LV432593'
+}] %}
+
+<div class="products-carousel js-products-carousel">
+    <div class="products-carousel__container">
+        <h2 class="products-carousel__title">Популярное</h2>
+        <div class="products-carousel__list js-slider">
+            {% for item in products %}
+                {% include './products-list-item.twig' with {'item': item, 'class': 'products-carousel', 'mod': ''} %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

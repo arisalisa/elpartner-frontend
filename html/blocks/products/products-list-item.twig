@@ -1,10 +1,17 @@
 <div class="{% if class %}{{ class }}__item {% endif %}product-item {{ mod }} js-product-list-item">
     <div class="product-item__img">
-        <a href="{{ url.productShow }}"><img class="js-img-lazy" src="assets/images/pixel.png" data-src="{{ item.img }}" alt="{{ item.title }}" title="{{ item.title }}"></a>
+        <a href="{{ url.productShow }}"><img src="{{ item.img }}" alt="{{ item.title }}" title="{{ item.title }}"></a>
         <a class="product-item__title" href="{{ url.productShow }}">{{ item.title }}</a>
     </div>
     <div class="product-item__info">
-
+        <div class="product-item__info-item">
+            <div class="product-item__info-title">Категория</div>
+            <div class="product-item__info-value">{{ item.category }}</div>
+        </div>
+        <div class="product-item__info-item">
+            <div class="product-item__info-title">Код производителя</div>
+            <div class="product-item__info-value">{{ item.code }}</div>
+        </div>
     </div>
     <div class="product-item__footer">
         <div class="product-item__count">

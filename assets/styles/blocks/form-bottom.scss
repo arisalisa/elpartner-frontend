@@ -1,0 +1,27 @@
+.form-bottom {
+  padding: 0 0 80px;
+  &__container {
+    background: #375DA8 url("/assets/images/form-bottom-bg.svg") left center no-repeat;
+    border-radius: 5px;
+    padding: 70px 30px;
+    color: #fff;
+    text-align: center;
+    background-size: auto 100%;
+  }
+  &__content {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  &__title {
+    color: #fff;
+  }
+  &__desc {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    @extend .btn;
+    @extend .-primary;
+  }
+}

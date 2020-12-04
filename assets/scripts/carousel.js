@@ -15,7 +15,7 @@ if ($sliderHeader.length > 0) {
 					self.carousel.addClass('owl-carousel');
 
 					self.carousel.owlCarousel({
-						nav: false,
+						nav: true,
 						dots: true,
 						loop: true,
 						autoplay: true,
@@ -32,8 +32,47 @@ if ($sliderHeader.length > 0) {
 	});
 }
 
+//products carousel
+const $sliderProducts = $('.js-products-carousel');
+if ($sliderProducts.length > 0) {
+	((_root) => {
+		const self = {
+			root: _root,
+			carousel: _root.find('.js-slider'),
+		};
 
-const $sliderPartners = $('.js-blocks');
+		self.carousel.addClass('owl-carousel');
+
+		self.carousel.owlCarousel({
+			nav: true,
+			dots: true,
+			loop: false,
+			items: 3,
+			margin: 20,
+			autoHeight: true,
+			responsive: {
+				0: {
+					items: 1,
+				},
+				550: {
+					items: 2,
+				},
+				820: {
+					items: 3,
+				},
+				1024: {
+					items: 4,
+				}
+			},
+			onInitialized: (event) => {
+				self.root.addClass('is-initialized');
+			},
+		});
+
+	})($sliderProducts);
+}
+
+const $sliderPartners = $('.js-partners-carousel');
 if ($sliderPartners.length > 0) {
 	((_root) => {
 		const self = {
@@ -49,24 +88,20 @@ if ($sliderPartners.length > 0) {
 			loop: false,
 			items: 3,
 			margin: 30,
-			mouseDrag: true,
 			autoHeight: true,
 			responsive: {
 				0: {
 					items: 1,
-					mouseDrag: true,
 				},
 				550: {
 					items: 2,
-					mouseDrag: true,
 				},
 				820: {
 					items: 2,
-					mouseDrag: true,
 				},
 				1024: {
-					items: 3,
-					mouseDrag: false,
+					items: 8,
+					margin: 80
 				}
 			},
 			onInitialized: (event) => {

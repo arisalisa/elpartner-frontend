@@ -54,3 +54,59 @@
 		}
 	}
 }
+
+.owl-dots {
+	button {
+		position: relative;
+		width: 8px;
+		height: 8px;
+		background: #CECECE !important;
+		border-radius: 50%;
+		margin: 5px 10px;
+		transition: all 0.2s ease;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 14px;
+			height: 14px;
+			border: 1px solid $color-orange;
+			background: transparent;
+			transition: all 0.2s ease;
+			opacity: 0;
+			border-radius: 50%;
+		}
+		&.active {
+			background: $color-orange !important;
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+.owl-nav {
+	button {
+		width: 60px;
+		height: 60px;
+		box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.13) !important;
+		border-radius: 3px;
+		transition: all .2s ease;
+		&.owl-prev {
+			background: #FFF url("data:image/svg+xml,%3Csvg width='13' height='24' viewBox='0 0 13 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 1.5L1 12L11.5 22.5' stroke='%23EF7B24' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center center no-repeat !important;
+			&:hover {
+				background: $color-orange url("data:image/svg+xml,%3Csvg width='13' height='24' viewBox='0 0 13 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 1.5L1 12L11.5 22.5' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center center no-repeat !important;
+			}
+		}
+		&.owl-next {
+			background: #FFF url("data:image/svg+xml,%3Csvg width='13' height='24' viewBox='0 0 13 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L12 12L1.5 22.5' stroke='%23EF7B24' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ") center center no-repeat !important;
+			&:hover {
+				background: $color-orange url("data:image/svg+xml,%3Csvg width='13' height='24' viewBox='0 0 13 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L12 12L1.5 22.5' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ") center center no-repeat !important;
+			}
+		}
+		span {
+			display: none;
+		}
+	}
+}
