@@ -1,0 +1,14 @@
+.products-carousel {
+    @extend .l-fullwidth;
+    background: #F8F8F8;
+    padding: 60px 0 60px;
+    &__container {
+        @extend .l-container;
+    }
+    &__title {
+        margin-bottom: 35px;
+    }
+    .owl-dots {
+        margin-top: 30px !important;
+    }
+}

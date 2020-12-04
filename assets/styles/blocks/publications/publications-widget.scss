@@ -1,13 +1,24 @@
-.publication-similar {
-	h2 {
-		margin-bottom: 50px;
+.publications-widget {
+	$gap: 20px;
+	@extend .l-fullwidth;
+	background: #F8F8F8;
+	padding: 60px 0 60px;
+	&__container {
+		@extend .l-container;
 	}
-	.publication-item {
-		&__desc {
-			display: none;
-		}
-		&__title {
-			margin-bottom: 25px;
-		}
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+	&__title {
+		margin-bottom: 0;
+	}
+	&__list {
+		@include grid($gap);
+	}
+	&__item {
+		@include grid-col(1/4, $gap);
 	}
 }

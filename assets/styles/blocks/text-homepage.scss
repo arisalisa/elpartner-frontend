@@ -1,4 +1,8 @@
 .text-main {
+    padding: 40px 0 80px;
+    &__title {
+        margin-bottom: 30px;
+    }
     &__container {
         display: flex;
         align-items: center;
@@ -16,9 +20,14 @@
             object-fit: contain;
         }
     }
+    &__text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
     &__btn {
         @extend .btn;
         @extend .-bordered;
+        margin-top: 15px;
     }
 }
 
