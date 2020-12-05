@@ -32,6 +32,7 @@
 }
 
 .text-additional {
+    padding: 80px 0 30px;
     &__container {
         display: flex;
         align-items: center;
@@ -49,10 +50,17 @@
             object-fit: contain;
         }
     }
+    &__text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
 }
 
 .partners {
-    padding: 60px 0 80px;
+    padding: 30px 0 80px;
+    &__title {
+        margin-bottom: 50px;
+    }
     &__item {
         display: flex;
         align-items: center;

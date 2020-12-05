@@ -173,8 +173,8 @@ const MenuMobile = function (_id, _tree) {
 		selectors: {
 			nodeRoot: '.is-root',
 			nodeLink: 'a, span',
-			node: '-has-dropdown',
-			btnToggle: '[data-menu-mobile--switcher-btn]'
+			node: 'dropdown',
+			btnToggle: '[data-btn]'
 		}
 	};
 

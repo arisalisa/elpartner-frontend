@@ -45,7 +45,7 @@
         <h2 class="products-carousel__title">Популярное</h2>
         <div class="products-carousel__list js-slider">
             {% for item in products %}
-                {% include './products-list-item.twig' with {'item': item, 'class': 'products-carousel', 'mod': ''} %}
+                {% include './products-list-item.twig' with {'item': item, 'class': 'products-carousel'} %}
             {% endfor %}
         </div>
     </div>

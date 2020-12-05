@@ -2,9 +2,29 @@
 	<div class="header__top">
 		<div class="header__container">
 			<div class="header__menu-top">
-{#				{% include './blocks/menu-top.twig' %}#}
+				<nav class="main-menu js-mobile-menu">
+					<button data-btn><span>menu</span></button>
+					<ul class="main-menu__root">
+						<li class="dropdown">
+                            <a href="#">О компании</a>
+							<div>
+								<ul>
+									<li><a href="#">О компании
+										</a></li>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Благодарности</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Производители</a></li>
+						<li><a href="#">Доставка и оплата</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
 			</div>
-			<div class="header__social social-icon">
+			<div class="header__social social-links">
 				<a href="#" class="icon-facebook" rel="noreferrer noopener">facebook</a>
 				<a href="#" class="icon-vkontakte" rel="noreferrer noopener">vkontakte</a>
 			</div>
@@ -30,11 +50,12 @@
 			</div>
 			<div class="header__contacts">
 				<div class="header__messengers">
-					<a href="https://api.whatsapp.com/send?phone=79621765457" class="header__whatsapp"></a>
+					<a href="tg://resolve?domain=NikName" class="header__telegram">Telegram</a>
+					<a href="https://api.whatsapp.com/send?phone=79621765457" class="header__whatsapp">Whatsapp</a>
 				</div>
 				<div class="header__phones">
-					<a href="tel:+79621765457" class="header__phone">+7 (962)176-54-57</a>
-					<a class="header__call">Заказать звонок</a>
+					<a class="header__phone" href="tel:+79621765457" class="header__phone">+7 (962)176-54-57</a>
+					<a class="header__call" href="#">Заказать звонок</a>
 				</div>
 			</div>
 		</div>
@@ -45,9 +66,9 @@
 				<button class="header__catalog-btn">
 					Каталог
 				</button>
-				<div class="header__catalog-dropdown">
+{#				<div class="header__catalog-dropdown">#}
 {#					{% include './blocks/menu-catalog.twig' %}#}
-				</div>
+{#				</div>#}
 			</div>
 			<div class="header__search">
 				<form action="" class="header__search-form">
@@ -57,7 +78,7 @@
 			</div>
 			<div class="header__cart">
 				В запросе
-				<a href="#">12 позиций</a>
+				<a href="#" class="header__cart-count">12 позиций</a>
 			</div>
 		</div>
 	</div>

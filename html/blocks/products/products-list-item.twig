@@ -1,8 +1,8 @@
-<div class="{% if class %}{{ class }}__item {% endif %}product-item {{ mod }} js-product-list-item">
+<div class="{% if class %}{{ class }}__item {% endif %}product-item">
     <div class="product-item__img">
         <a href="{{ url.productShow }}"><img src="{{ item.img }}" alt="{{ item.title }}" title="{{ item.title }}"></a>
-        <a class="product-item__title" href="{{ url.productShow }}">{{ item.title }}</a>
     </div>
+    <a class="product-item__title" href="{{ url.productShow }}">{{ item.title }}</a>
     <div class="product-item__info">
         <div class="product-item__info-item">
             <div class="product-item__info-title">Категория</div>
@@ -17,6 +17,6 @@
         <div class="product-item__count">
             <input class="js-custom-number" type="text" pattern="^[ 0-9]+$" value="1">
         </div>
-        <button class="product-item__btn-buy">В запрос</button>
+        <button class="product-item__btn">В запрос</button>
     </div>
 </div>

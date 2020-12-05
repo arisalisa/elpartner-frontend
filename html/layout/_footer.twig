@@ -3,60 +3,89 @@
 		<div class="menu-footer js-footer-menu">
 			<nav class="menu-footer__container">
 				<ul>
-					<li class="-has-dropdown is-active">
-						<a href="">Category 1</a>
-						<div class="menu-footer__dropdown -col-2">
-							<ul>
-								{% for i in 0..12 %}
-									<li {% if (loop.index == 3) %}class="is-active"{% endif %}>
-										<a href="#">Subcategory {{loop.index}}</a>
-									</li>
-								{% endfor %}
-							</ul>
-						</div>
-					</li>
-					{% for i in 0..2 %}
-						<li class="-has-dropdown">
-							<a href="">Category {{loop.index + 1}}</a>
+					{% for i in 0..3 %}
+						<li class="dropdown">
+							<a href="">Категория {{loop.index}}</a>
 							<div class="menu-footer__dropdown">
 								<ul>
-									{% for i in 0..7 %}
-										<li><a href="#">Subcategory {{loop.index}}</a></li>
+									{% for i in 0..4 %}
+										<li><a href="#">Подкатегория {{loop.index}}</a></li>
 									{% endfor %}
 								</ul>
+								<button class="menu-footer__dropdown-btn">Показать ещё 10 групп</button>
 							</div>
 						</li>
 					{% endfor %}
+					<li class="dropdown">
+						<a href="">Категория 5</a>
+						<div class="menu-footer__dropdown">
+							<ul>
+								<li><a href="#">Подкатегория {{loop.index}}</a></li>
+							</ul>
+						</div>
+					</li>
 				</ul>
 			</nav>
 		</div>
 	</div>
 
 	<div class="footer__bottom">
-		<div class="footer__content">
-			<a href="/" class="footer__logo">
-				<img src="/assets/images/logo.svg" alt="Элпратнер">
-			</a>
-			<div class="footer__copyright">© 2005–2020 ООО «Элпартнер».<br> Поставщик электротехнического оборудования</div>
-			<a href="#" class="footer__policy">Политика конфиденциальности</a>
+		<div class="footer__bottom-container">
+			<div class="footer__content">
+				<a href="/" class="footer__logo">
+					<img src="/assets/images/logo.svg" alt="Элпратнер">
+				</a>
+				<div class="footer__copyright">© 2005–2020 ООО «Элпартнер».<br> Поставщик электротехнического<br> оборудования</div>
+				<a href="#" class="footer__policy">Политика конфиденциальности</a>
+			</div>
+			<div class="footer__menu-bottom">
+				<span>Покупателям</span>
+				<nav>
+					<ul>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Производители</a></li>
+						<li><a href="#">Доставка и оплата</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer__info">
+				<div class="footer__address">
+					<div class="footer__address-name">
+						Главный офис
+					</div>
+					г. Калуга, ул. Тульская, д. 189, пом.6
+				</div>
+				<div class="footer__email">
+					<div class="footer__email-name">
+						Email
+					</div>
+					<a href="mailto:ohrimenko.go@elpartner.ru">ohrimenko.go@elpartner.ru</a>
+				</div>
+				<div class="footer__social">
+					<div class="footer__social-name">
+						Мы в социальных сетях
+					</div>
+					<div class="social-links">
+						<a href="#" class="icon-facebook" rel="noreferrer noopener">facebook</a>
+						<a href="#" class="icon-vkontakte" rel="noreferrer noopener">vkontakte</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__contacts">
+				<div class="footer__phones">
+					<a class="footer__phone" href="tel:+79621765457" class="footer__phone">+7 (962)176-54-57</a>
+					<a class="footer__call" href="#">Заказать звонок</a>
+				</div>
+				<div class="footer__messengers">
+					<a href="tg://resolve?domain=NikName" class="footer__telegram">Telegram</a>
+					<a href="https://api.whatsapp.com/send?phone=79621765457" class="footer__whatsapp">Whatsapp</a>
+				</div>
+			</div>
 		</div>
-		<div class="social-icon">
-			<a href="#" class="icon-facebook" rel="noreferrer noopener">facebook</a>
-			<a href="#" class="icon-vkontakte" rel="noreferrer noopener">vkontakte</a>
-		</div>
-		<div class="footer__menu-bottom">
-			Покупателям
-			<nav>
-				<ul>
-					<li>О компании</li>
-					<li>Производители</li>
-					<li>Доставка и оплата</li>
-					<li>Акции</li>
-					<li>Новости</li>
-					<li>Контакты</li>
-				</ul>
-			</nav>
-		</div>
+
 	</div>
 </footer>
 

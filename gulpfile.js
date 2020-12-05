@@ -13,17 +13,16 @@ const scripts = [
 				'public/assets/node_modules/jquery/dist/jquery.js',
 				'public/assets/node_modules/imagesloaded/imagesloaded.pkgd.js',
 				'public/assets/node_modules/owl.carousel/dist/owl.carousel.js',
-				'assets/vendor/wow.min.js',
 				'assets/vendor/jquery.inputmask.bundle.js'
 			],
 			src:    [
+				'assets/scripts/app.js',
 				'assets/scripts/decorators.util.js',
 				'assets/scripts/dom-events.js',
 				'assets/scripts/common.js',
 				'assets/scripts/scroll.js',
 				'assets/scripts/scroll-top.js',
 				'assets/scripts/resize.js',
-				// 'assets/scripts/menu-smart.js',
 				'assets/scripts/menu-mobile.js',
 				'assets/scripts/carousel.js',
 				'assets/scripts/products.js',
